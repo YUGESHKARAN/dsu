@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/back1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.login-container {
+    background-color: #fffffff3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 27px rgb(190, 78, 255);
+    width: 400px;
+    text-align: center;
+    margin: auto;
+   
+}
+
+.login-container .logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    color: black;
+}
+
+.login-text {
+    color: #8f36ef;
+    text-decoration: underline;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    margin: auto;
+    font-size: 17px;
+    margin-bottom: 15px;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(207, 207, 207, 0.915);
+    color: #000;
+    border-color: #000;
+   
+
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c76ef7;
+    color: #000;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #8f36ef;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="submit"] {
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="submit"] {
+        padding: 3px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+
+    .login-container .logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+.login1{
+   padding: 5px;
+}
+
