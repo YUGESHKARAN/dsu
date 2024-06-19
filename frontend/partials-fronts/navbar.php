@@ -26,7 +26,7 @@ include('./partials-fronts/verify-faculty-login.php');
                 <li class="close" onclick="closebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" fill="white" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
                 <li><a href="">Home</a></li>
                 <li><a href="<?php echo SITEURL;?>frontend/faculty.php">Attendance</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?php echo SITEURL;?>frontend/schedule.php">Schedule</a></li>
                 <li><a href="<?php echo SITEURL;?>frontend/log-out.php">Logout</a></li>
             </ul>
 
@@ -35,3 +35,15 @@ include('./partials-fronts/verify-faculty-login.php');
       
  </nav>
 </nav>
+
+<script>
+
+  function menubar(){
+    var menu = document.getElementById("menu");
+    menu.style.right='-20px';
+  }
+  function closebar(){
+    var menu = document.getElementById("menu");
+    menu.style.right='-200px';
+  }
+</script>

@@ -19,7 +19,15 @@ include('../config/constants.php') ;
     header("location:".SITEURL."frontend/faculty.php");
    }
 
-?>
+   
+
+  
+   
+   
+   ?>
+   
+
+
 </body>
 </html>
 

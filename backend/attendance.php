@@ -115,6 +115,10 @@ include('./partials/front.php');
                             $present_hour =($cnt>0)?$row2['totl_hour_present']:0;
                             $per = ($present_hour/$totl_hour) * 100;
                             $percentage = number_format($per,2);
+
+                            $sql3 = "UPDATE students SET attendance_percentage=$percentage WHERE roll_no=$roll_no";
+                            $res3 = mysqli_query($conn,$sql3);
+
                              
                             ?>
                      

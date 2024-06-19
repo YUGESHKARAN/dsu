@@ -27,13 +27,24 @@ include('./partials-fronts/verify-faculty-login.php');
     $faculty_name = $_SESSION['faculty-name'];
     $faculty_email = $_SESSION['faculty-email'];
      ?>
+
+<!-- <div class="banner"></div> -->
      
 <!---<hr style="border-color: rgba(128, 128, 128, 0.112);">-->
 <marquee behavior="" scrollamount="7" style="margin:auto;color:#000000;font-size: 17px;font-family: poppins; font-weight: 650; width: 100%;" direction=""> Welcome to "<span style="color:  rgb(140, 68, 228);"> class link </span>" the ultimate solution for hassle-free attendance management.
   Streamline your classroom tracking, empower students with real-time updates, and simplify educators' tasks with our intuitive platform  </marquee>
   <hr>
+
+  
+
 <!-- Box Container-->
 <H1 style="text-align:center;margin:30px auto;" class="atd-title"><span style="color: #8800cc;">WELCOME TO ATTENDANCE PANEL</span></H1>
+
+
+<div class="welcomeNotice" id="noticebanner">
+  <img src="./images//welcome2.png" alt="">
+
+</div>
 
 
 
@@ -82,7 +93,7 @@ include('./partials-fronts/verify-faculty-login.php');
 <form  method="POST" id="newform" class="form" enctype="multipart/form-data">
   <?php
 
-$firstdate = new DateTime("first day of previous month");
+$firstdate = new DateTime("first day of March");
 $currentdate = new DateTime();
 
 ?>
@@ -176,10 +187,11 @@ $currentdate = new DateTime();
                <input type="hidden" name="fname" id="fname" value="<?php echo $faculty_name;?>">
                <input type="hidden" name="femail" id="femail" value="<?php echo $faculty_email;?>">
                
-               <input type="submit" id="submit" class="submit" name="submit" value="submit">
+               <input type="submit" id="submit"  class="submit" name="submit" onclick="hidenoticebanner()" value="submit">
            </form>
 
     </form>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script.js"></script>
 
@@ -187,6 +199,11 @@ $currentdate = new DateTime();
 
     
 </div>
+
+ 
+ 
+ 
+ 
 
 <!------<center><div class="boxn">
     <h3><span style="color: red;">" Note !"</span></h3>
@@ -203,16 +220,18 @@ $currentdate = new DateTime();
 
 
 
-<div id="response" style="padding-bottom:50px;"></div>
-
+<div id="response" style="padding-bottom:50px; margin-bottom:40px"></div>
 
 
 
     <br>
     
- <hr>
+
  <!--footer------------------------------------->
+ <hr style="margin-bottom:0;">
  <div class="footer">
+  
+  <div class="copyright">&copy;2024: DSU</div>
 
  </div>
 
@@ -226,3 +245,10 @@ $currentdate = new DateTime();
     
  </body>
  </html>
+
+ <script>
+  function hidenoticebanner(){
+    var noticbaner =  document.getElementById("noticebanner");
+    noticbaner.style.display="none";
+  }
+ </script>

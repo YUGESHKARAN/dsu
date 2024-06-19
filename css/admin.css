@@ -481,7 +481,12 @@ table tr td.bold {
     font-size: 12px;
   }
   table.ad-tbl tr, table.ad-tbl td {
-    padding-top: 10px;
+    padding-top: 5px;
+  }
+  table.ad-tbl tr p, table.ad-tbl td p {
+    width: 150px;
+    text-wrap: wrap;
+    overflow-x: auto;
   }
 }
 .time-table {
@@ -531,7 +536,7 @@ table tr td.bold {
   .time-table {
     width: 70%;
     margin: auto;
-    font-size: 7px;
+    font-size: 6.5px;
   }
   .time-table tr td {
     font-weight: 600;

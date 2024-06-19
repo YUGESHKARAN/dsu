@@ -61,11 +61,11 @@ if (isset($_GET['id']))
 
 
          //check the image is selected or not
-    if(isset($_FILES['image']['name']))
+    if(isset($_FILES['image1']['name']))
     {
         //GET the image details
-        $image_name = $_FILES['image']['name'] ;
-
+        $image_name = $_FILES['image1']['name'] ;
+    
         //A.check the image is availble or not
         if($image_name !="")
         {
@@ -74,13 +74,13 @@ if (isset($_GET['id']))
           //Auto rename images
                 //Get the extension of the image  e.g: "food_image.jpg"
 
-                $parts = explode('.', $image_name);
+              $parts = explode('.', $image_name);
               $ext = end($parts); // seperate the extension e.g: "jpg"
 
 
                 $image_name = "profile_".rand(000,999).'.'.$ext; // make a new value for image name e.g: "Food_Category_453.jpg"
 
-                $source_path = $_FILES['image']['tmp_name'];
+                $source_path = $_FILES['image1']['tmp_name'];
                 
                 $destination_path = "../images/student/".$image_name;
 
@@ -101,7 +101,7 @@ if (isset($_GET['id']))
                 }
 
                 // B.Remove current image if only available
-                if($current_image != "")
+                if($current_image !="")
                 {
                     $remove_path  = "../images/student/".$current_image;
 
@@ -111,15 +111,15 @@ if (isset($_GET['id']))
                     //if failed to remove display Message and stop process
                     if($remove === false)
                     {
-                        $_SESSION['failed-remove'] = "<div class='fail'>Failed to remove Image</div>";
-                        header("location:".SITEURL.'backend/student.php');
+                        $_SESSION['failed-remove'] = "<div class='fail' style='text-align:center;color:red;font-size:20px'>Failed to remove Image</div>";
+                        header("location:".SITEURL.'backend/students.php');
                         die();//stop the pocess
                     }
                 }
                 else
                     {
                     // image will be current image
-                     $image_name = $current_image ;
+                     $image_name = $image_name ;
                     }
                             
 
@@ -134,6 +134,7 @@ if (isset($_GET['id']))
     {
       $image_name = $current_image ;
     }
+
 
 
     $sql2 = "UPDATE students SET
@@ -220,7 +221,7 @@ if (isset($_GET['id']))
         <tr style="margin-top:30px">
             <td>STUDENT IMAGE</td>
             <td>
-                : <input type="file" name="image">
+                : <input type="file" name="image1">
             </td>
         </tr>
 

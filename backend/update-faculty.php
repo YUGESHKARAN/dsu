@@ -90,7 +90,7 @@ if(isset($_GET['id']))
                     else
                         {
                         // image will be current image
-                         $image_name = $current_image ;
+                         $image_name = $image_name;
                         }
                                 
     

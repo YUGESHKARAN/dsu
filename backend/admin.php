@@ -77,9 +77,9 @@ if($count > 0)
     <th>ADMIN NAME</th>
     <td>: <?php echo $name;?></td>
 </tr>
-<tr>
+<tr >
     <th>ADMIN Email-ID</th>
-    <td>: <?php echo $email;?></td>
+    <td >: <p><?php echo $email;?></p></td>
 </tr>
 
 <tr>
