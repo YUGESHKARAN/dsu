@@ -19,7 +19,7 @@
 if(isset($_POST['submit']))
 { 
   echo "selected";
-    $name = $_POST['name'];
+    // $name = $_POST['name'];
    $email = $_POST['email'];
    $password=$_POST['password'];
    
@@ -31,7 +31,7 @@ if(isset($_POST['submit']))
   
    if($res==True AND $password=="123"){
        $_SESSION['faculty-login'] = "<div style='color:green;text-align:center;font-size:20px;font-weight:700;'>Login Successful</div>";
-       $_SESSION['faculty-name'] = $name;
+    //    $_SESSION['faculty-name'] = $name;
        $_SESSION['faculty-email'] = $email;
        $_SESSION['faculty-password'] = $password;
        header("location:".SITEURL."frontend/faculty.php");
@@ -205,10 +205,8 @@ if(isset($_POST['submit']))
         <h2><span class="login1" style="color: #000000;">Login</span></h2>
         
          <form  action="" method="POST" class="login-form"  enctype="multipart/form-data">
-    
-            NAME<br>
-            <input type="text" name="name">
-            EMAIL<br>
+           
+            User ID <br>
             <input type="email" name="email" class="email">
             Password<br>
             <input type="password" name="password" >

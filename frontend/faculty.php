@@ -24,7 +24,7 @@ include('./partials-fronts/verify-faculty-login.php');
         unset($_SESSION['faculty-login']);
         
     }
-    $faculty_name = $_SESSION['faculty-name'];
+    // $faculty_name = $_SESSION['faculty-name'];
     $faculty_email = $_SESSION['faculty-email'];
      ?>
 

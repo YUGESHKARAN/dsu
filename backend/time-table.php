@@ -2,7 +2,7 @@
 ?>
 <body>
 <div class="adcontainer">
-    <h1>DSU TIME-TABLE CONTROL PANNEL</h1>
+    <h1>DSU TIME-TABLE CONTROL PANEL</h1>
 </div>
 <?php
 //SELECT DISTINCT S.name, S.roll_no, T.hour from students AS S INNER JOIN time_table AS T ON S.department = T.department AND S.semester = T.semester AND S.section = T.section  WHERE T.faculty_email ='ramachandran@faculty123.com' AND T.day='Tuesday'  ORDER by T.hour ;
@@ -273,7 +273,7 @@ $sec = $row['section'];
 
 <!-----TIME TABALE 2------>
    
-<h3 class='table-class-title'>Class Time Table 2</h3>
+<!-- <h3 class='table-class-title'>Class Time Table 2</h3>
 
 <div class="table-wrapper" >
   
@@ -496,13 +496,13 @@ $sec = $row['section'];
 </table>
 
 
-
+ -->
 
 
 <!--------Time Table 2 ends---------------------------------->
 
 <!-----TIME TABALE 3------>
-   
+<!--    
 <h3 class='table-class-title'>Class Time Table 3</h3>
 
 <div class="table-wrapper" >
@@ -726,7 +726,7 @@ $sec = $row['section'];
 </table>
 
 
-
+ -->
 
 <!--------Time Table 3 ends---------------------------------->
 

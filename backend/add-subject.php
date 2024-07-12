@@ -11,6 +11,7 @@ if(isset($_POST['submit']))
     $department = $_POST['department'];
     $semester = $_POST['semester'];
     $sub_type = $_POST['sub_type'];
+    
     $sql = "INSERT INTO subject_tbl SET
     semester = '$semester',
     department = '$department',

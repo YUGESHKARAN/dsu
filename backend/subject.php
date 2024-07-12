@@ -4,7 +4,7 @@
 
 
 <div class="adcontainer">
-    <h1>DSU SUBJECTS CONTROL PANNEL</h1>
+    <h1>DSU SUBJECTS CONTROL PANEL</h1>
 </div>
 
 
