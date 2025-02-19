@@ -23,8 +23,8 @@ include('./partials-fronts/verify-faculty-login.php');
          <div class="navbarbuttons" id="menu">
             
             <ul class="ulist" >
-                <li class="close" onclick="closebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" fill="white" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
-                <li><a href="">Home</a></li>
+                <!-- <li class="close" onclick="closebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" fill="white" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li> -->
+                <!-- <li><a href="">Home</a></li> -->
                 <li><a href="<?php echo SITEURL;?>frontend/faculty.php">Attendance</a></li>
                 <li><a href="<?php echo SITEURL;?>frontend/schedule.php">Schedule</a></li>
                 <li><a href="<?php echo SITEURL;?>frontend/log-out.php">Logout</a></li>
@@ -38,12 +38,21 @@ include('./partials-fronts/verify-faculty-login.php');
 
 <script>
 
-  function menubar(){
-    var menu = document.getElementById("menu");
-    menu.style.right='-20px';
-  }
-  function closebar(){
-    var menu = document.getElementById("menu");
-    menu.style.right='-200px';
-  }
+function menubar() {
+            var menu = document.getElementById("menu");
+            menu.style.right = '-20px';
+        }
+        function closebar() {
+            var menu = document.getElementById("menu");
+            menu.style.right = '-200px';
+        }
+
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById("menu");
+            var menuButton = document.querySelector('.menu');
+            if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+                menu.style.right = '-200px';
+            }
+        });
 </script>

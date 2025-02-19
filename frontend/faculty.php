@@ -3,8 +3,11 @@
 <?php
 include('./partials-fronts/navbar.php');
 include('./partials-fronts/verify-faculty-login.php');
- $firstdate = new DateTime("first day of this month");
+//  $firstdate = new DateTime("first day of this month");
+$firstdate = new DateTime('first day of this month 00:00:00');
+
         $currentdate = new DateTime();
+        // echo $currentdate->format('d-M-Y');
 ?>
 
 
@@ -93,7 +96,7 @@ include('./partials-fronts/verify-faculty-login.php');
 <form  method="POST" id="newform" class="form" enctype="multipart/form-data">
   <?php
 
-$firstdate = new DateTime("first day of March");
+$firstdate = new DateTime("first day of this month");
 $currentdate = new DateTime();
 
 ?>
@@ -135,7 +138,7 @@ $currentdate = new DateTime();
               {
                $cudate =  $_SESSION['selected-date'];
                $date =  DateTime::createFromFormat('d-M-Y', $cudate);
-               $cuday = $date->format('l');
+               $cuday = $date ? $date->format('l') : 'Invalid Date';
               
    
               }
@@ -162,7 +165,7 @@ $currentdate = new DateTime();
                <p ><pre><?php echo $cudate; ?></pre> </p>
       </div>
                 
-               <select name="day" id="day" style="display:none">
+               <select name="day" id="day"  style="display:none;">
                     <option <?php if(isset($_SESSION['selected-date'])) {if($cuday=="Monday")   {echo "selected";}} elseif($day=="Monday")   {echo "selected"; } ?>  value="Monday">Monday</option>
                     <option <?php if(isset($_SESSION['selected-date'])) {if($cuday=="Tuesday")  {echo "selected";}} elseif($day=="Tuesday")  {echo "selected";} ?>  value="Tuesday">Tuesday</option>
                     <option <?php if(isset($_SESSION['selected-date'])) {if($cuday=="Wednesday"){echo "selected";}} elseif($day=="Wednesday"){echo "selected";} ?>  value="Wednesday">Wednesday</option>
@@ -190,7 +193,7 @@ $currentdate = new DateTime();
                <input type="submit" id="submit"  class="submit" name="submit" onclick="hidenoticebanner()" value="submit">
            </form>
 
-    </form>
+
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script.js"></script>

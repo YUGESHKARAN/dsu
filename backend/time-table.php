@@ -272,7 +272,7 @@ $sec = $row['section'];
 <!--------time table 1 end ------->
 
 <!-----TIME TABALE 2------>
-   
+<!--    
 <h3 class='table-class-title'>Class Time Table 2</h3>
 
 <div class="table-wrapper" >
@@ -494,7 +494,7 @@ $sec = $row['section'];
 
 
 </table>
-
+ -->
 
 
 
@@ -503,7 +503,7 @@ $sec = $row['section'];
 
 <!-----TIME TABALE 3------>
    
-<h3 class='table-class-title'>Class Time Table 3</h3>
+<!-- <h3 class='table-class-title'>Class Time Table 3</h3>
 
 <div class="table-wrapper" >
   
@@ -723,7 +723,7 @@ $sec = $row['section'];
 
 
 
-</table>
+</table> -->
 
 
 
