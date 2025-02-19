@@ -136,7 +136,9 @@ nav{
        
     }
    
-    .navbarbuttons ul li a{
+    .navbarbuttons ul li {
+     
+      a{
         text-decoration: none;
         margin-right: 20px;
         color:#fff;
@@ -1338,10 +1340,12 @@ span.day{
   width: 400px;
 margin: auto;
 margin-top: 50px;
+
 select{
   padding: 1%;
   outline: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 //background: black;
 // border-radius: 10px;
@@ -1372,6 +1376,7 @@ padding-left: 10px;
       color: #fff;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
+      cursor: pointer;
       cursor: pointer;
     }
   }

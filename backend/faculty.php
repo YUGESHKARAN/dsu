@@ -4,7 +4,7 @@
 
 
 <div class="adcontainer">
-    <h1>DSU FACULTIES CONTROL PANNEL</h1>
+    <h1>DSU FACULTIES CONTROL PANEL</h1>
 </div>
 
 <?php 

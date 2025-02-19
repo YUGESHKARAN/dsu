@@ -2,7 +2,7 @@
 ?>
 <body>
 <div class="adcontainer">
-    <h1>DSU STUDENT CONTROL PANNEL</h1>
+    <h1>DSU STUDENT CONTROL PANEL</h1>
 </div>
 
 

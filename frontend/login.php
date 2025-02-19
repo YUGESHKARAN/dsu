@@ -20,6 +20,7 @@ if(isset($_POST['submit']))
 { 
   echo "selected";
     // $name = $_POST['name'];
+    // $name = $_POST['name'];
    $email = $_POST['email'];
    $password=$_POST['password'];
    

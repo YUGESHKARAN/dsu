@@ -998,6 +998,7 @@ span.day {
   padding: 1%;
   outline: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 .formnewsearch .searchfrom {
   width: 320px;

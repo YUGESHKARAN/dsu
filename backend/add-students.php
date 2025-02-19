@@ -97,12 +97,11 @@ if(isset($_POST['submit']))
      status = '$status',
      section = '$sec',
      gender='$gender',
-     hd='$hrd '
-
+     hd ='$hrd',
+     attendance_percentage =''
     ";
 
- 
-    $res = mysqli_query($conn,$sql) or die(mysql_error());
+    $res = mysqli_query($conn, $sql) or die(mysql_error());
 
     if($res == TRUE)
     {
@@ -191,27 +190,27 @@ if(isset($_POST['submit']))
         <tr>
             <td>DEGREE</td>
             <td>
-                <input type="text" name="degree">
+                <input type="text" name="degree" value="UG">
             </td>
         </tr>
 
         <tr>
             <td>DEPARTMENT</td>
             <td>
-                <input type="text" name="department">
+                <input type="text" name="department" value="AI&DS">
             </td>
         </tr>
 
         <tr>
             <td>SEMESTER</td>
             <td>
-                <select name="semester" >
+                <select name="semester">
                     <option value="I">I</option>
                     <option value="II">II</option>
                     <option value="III">III</option>
                     <option value="IV">IV</option>
                     <option value="V">V</option>
-                    <option value="VI">VI</option>
+                    <option value="VI" selected>VI</option>
                     <option value="VII">VII</option>
                     <option value="VIII">VIII</option>
                    
@@ -224,7 +223,7 @@ if(isset($_POST['submit']))
             <td>
                 <select name="section" >
                     <option value="A">A</option>
-                    <option value="B">B</option>
+                    <option value="B" selected>B</option>
                     <option value="C">C</option>
                     <option value="D">D</option>
                     <option value="E">E</option>

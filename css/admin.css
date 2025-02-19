@@ -134,6 +134,26 @@ nav .nav-links ul li a:hover {
   color: #fff;
 }
 
+.baner {
+  position: relative;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/dsubanner.jpg");
+  height: 400px;
+  width: 900px;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.baner div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.baner div h3 {
+  color: #fff;
+}
+
 @media (max-width: 1150px) {
   .scroll {
     font-size: 9px;

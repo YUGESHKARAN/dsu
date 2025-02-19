@@ -129,6 +129,26 @@ nav{
         }
     }
 }
+.baner{
+   // background: url('../images/dsubanner.jpg');
+   position: relative;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/dsubanner.jpg');
+    height: 400px;
+    width: 900px;
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+       div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        h3{
+            color: #fff;
+        }
+    }
+}
 
 @media(max-width:1150px){
     .scroll{

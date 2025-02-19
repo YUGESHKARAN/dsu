@@ -36,7 +36,7 @@ if(isset($_SESSION['login-check']))
 </style>
 <div class="login-container">
 
-<h1 style="text-align:center;margin-top:50px">WELCOME TO DSU ADMIN PANNEL LOGIN PAGE</h1>
+<h1 style="text-align:center;margin-top:50px">WELCOME TO DSU ADMIN PANEL LOGIN PAGE</h1>
 
 <div class="log-box">
 <h1 class="log-head">LOGIN PAGE</h1>

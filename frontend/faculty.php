@@ -27,7 +27,7 @@ $firstdate = new DateTime('first day of this month 00:00:00');
         unset($_SESSION['faculty-login']);
         
     }
-    $faculty_name = $_SESSION['faculty-name'];
+    // $faculty_name = $_SESSION['faculty-name'];
     $faculty_email = $_SESSION['faculty-email'];
      ?>
 

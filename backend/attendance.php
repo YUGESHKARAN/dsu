@@ -6,7 +6,7 @@ include('./partials/front.php');
 
 
 <div class="adcontainer">
-    <h1>DSU STUDENT ATTENDANCE PANNEL</h1>
+    <h1>DSU STUDENT ATTENDANCE PANEL</h1>
 </div>
 
 
@@ -39,7 +39,7 @@ include('./partials/front.php');
         $sql1 = "SELECT count(attendance_tbl_$sem.attendance_status) as totl_hour,attendance_tbl_$sem.roll_no,S.name, S.department,S.semester,S.photo,S.status, S.section from attendance_tbl_$sem  INNER JOIN students as S on S.roll_no = attendance_tbl_$sem.roll_no  GROUP BY attendance_tbl_$sem.roll_no,S.name,S.department,S.semester,S.photo,S.status,S.section ORDER BY S.roll_no";
         $res1 = mysqli_query($conn,$sql1);
         $count1 = mysqli_num_rows($res1);
-        if($count1>1){
+        if($count1>0){
             while($row1= mysqli_fetch_assoc($res1))
             {
                 $totl_hour = $row1['totl_hour'];
@@ -123,8 +123,8 @@ include('./partials/front.php');
                             ?>
                      
                         </div>
-                              <div style="width: 60%; margin: auto;">
-                                <canvas id="<?php echo $student_id;?>" style="width:100%;margin:auto;cursor:pointer;"></canvas>
+                              <div style="width: 65%; margin: auto;">
+                                <canvas id="<?php echo $student_id;?>" height='200' width='250'  style="margin:auto;cursor:pointer; "></canvas>
                               </div>
                      </div>
                 </div>
@@ -137,7 +137,7 @@ include('./partials/front.php');
 
                         // Data for the pie chart
                         var data = {
-                            labels: ['PRESENT - <?php echo $percentage;?>%', 'ABSENT - <?php echo 100-$percentage;?>%'],
+                            labels: ['P - <?php echo $percentage;?>%', 'A - <?php echo 100-$percentage;?>%'],
                             datasets: [{
                                 data: [percentage, remaining],
                                 backgroundColor: ['blue', 'red'], // Green and Yellow colors
@@ -152,11 +152,27 @@ include('./partials/front.php');
                             
                             plugins: {
 
-                                label: function(context) {
+                                       label: function(context) {
                                             var label = context.label || '';
                                            
                                             return label;
-                                        }
+                                        },
+                                        legend:{
+                                            display:true,
+                                            position:'right',
+                                          
+                                            labels: {
+                                            color: '#30336b', 
+                                            
+                                            font: {
+                                                size: 13,
+                                               weight:700,
+                                               family: 'Arial', // Font family
+                                               style: 'italic' // Font style // Font size
+                                            }
+                                        },
+                                      
+                                                                }
                             }
                         };
 
@@ -164,6 +180,7 @@ include('./partials/front.php');
                         // Create the pie chart
                         var ctx = document.getElementById('<?php echo $student_id;?>').getContext('2d');
                         var myPieChart = new Chart(ctx, {
+                           
                             type: 'pie',
                             data: data,
                             options: options

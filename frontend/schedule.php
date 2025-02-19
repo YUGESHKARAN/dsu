@@ -6,7 +6,7 @@ $firstdate = new DateTime();
 $CurrentDay = $firstdate->format('l');
 
 
- $faculty_name = $_SESSION['faculty-name'];
+//  $faculty_name = $_SESSION['faculty-name'];
     $faculty_email = $_SESSION['faculty-email'];
 ?>
 
