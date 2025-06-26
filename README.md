@@ -13,6 +13,7 @@ This project delivers a web-based Attendance Management System designed to solve
   - **Database:** MySQL manages students, faculties, subjects, timetables, and attendance data.
 - **Integrated LLM-Powered SQL Chatbot:**
   - Developed in Python using Flask (backend), Langchain NLP library, and OpenAI API.
+  - Uses the **meta-llama/Llama-4-Scout-17B-16E-Instruct** LLM model for advanced natural language understanding.
   - Allows natural language analysis, visualization, and management of data directly from the database.
   - Supports operations like updating, modifying, and deleting records without writing SQL queries.
   - **Explore the Chatbot Source:** [MySQL RAG: LLM-Powered SQL Chatbot](https://github.com/YUGESHKARAN/MySQL-RAG.git)
@@ -28,12 +29,12 @@ This system addresses these challenges by integrating a natural language chatbot
 
 ## Technology Stack
 
-| Layer        | Technology                                |
-|--------------|-------------------------------------------|
-| Frontend     | HTML5, SCSS, JavaScript                   |
-| Backend      | PHP                                       |
-| Database     | MySQL                                     |
-| AI Chatbot   | Python, Flask, Langchain, OpenAI API      |
+| Layer        | Technology                                            |
+|--------------|-------------------------------------------------------|
+| Frontend     | HTML5, SCSS, JavaScript                               |
+| Backend      | PHP                                                   |
+| Database     | MySQL                                                 |
+| AI Chatbot   | Python, Flask, Langchain, OpenAI API, Llama-4-Scout   |
 
 ## Folder Structure
 
@@ -48,7 +49,6 @@ The project is organized for clarity and maintainability:
 
 See the structure overview above for more detail.
 
-![Project Folder Structure](image1)
 
 ## System Architecture
 
@@ -57,6 +57,7 @@ See the structure overview above for more detail.
 3. **Database (MySQL):** Stores all core data.
 4. **AI Chatbot (Python):**
    - Built with Flask, connects directly to the MySQL database.
+   - Powered by meta-llama/Llama-4-Scout-17B-16E-Instruct for LLM reasoning.
    - Translates natural language commands into database queries and visualizations.
 
 ## Getting Started
@@ -73,7 +74,8 @@ See the structure overview above for more detail.
     - Serve the frontend files using a web server or development server.
 5. **Launch the Chatbot:**
     - Clone and set up the chatbot from [MySQL RAG: LLM-Powered SQL Chatbot](https://github.com/YUGESHKARAN/MySQL-RAG.git)
-    - Install Python dependencies: `flask`, `langchain`, `openai`.
+    - Install Python dependencies from the: `requirements.txt`.
+    - Ensure access/configuration for the meta-llama/Llama-4-Scout-17B-16E-Instruct model.
     - Follow the instructions in the chatbot repo to run the Flask app.
 
 ## Usage
@@ -92,7 +94,7 @@ See the structure overview above for more detail.
 
 ## Contributing
 
-We welcome contributions! Please open an issue or pull request for suggestions, improvements, or bug fixes.
+We welcome contributions! Open an issue or pull request for suggestions, improvements, or bug fixes.
 
 ## Contact
 
