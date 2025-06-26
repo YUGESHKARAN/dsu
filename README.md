@@ -12,7 +12,7 @@ This project delivers a web-based Attendance Management System designed to solve
   - **Server:** PHP scripting language.
   - **Database:** MySQL manages students, faculties, subjects, timetables, and attendance data.
 - **Integrated LLM-Powered SQL Chatbot:**
-  - Developed in Python using Streamlit (UI), Langchain NLP library, and OpenAI API.
+  - Developed in Python using Flask (backend), Langchain NLP library, and OpenAI API.
   - Allows natural language analysis, visualization, and management of data directly from the database.
   - Supports operations like updating, modifying, and deleting records without writing SQL queries.
   - **Explore the Chatbot Source:** [MySQL RAG: LLM-Powered SQL Chatbot](https://github.com/YUGESHKARAN/MySQL-RAG.git)
@@ -33,7 +33,7 @@ This system addresses these challenges by integrating a natural language chatbot
 | Frontend     | HTML5, SCSS, JavaScript                   |
 | Backend      | PHP                                       |
 | Database     | MySQL                                     |
-| AI Chatbot   | Python, Streamlit, Langchain, OpenAI API  |
+| AI Chatbot   | Python, Flask, Langchain, OpenAI API      |
 
 ## Folder Structure
 
@@ -48,13 +48,15 @@ The project is organized for clarity and maintainability:
 
 See the structure overview above for more detail.
 
+![Project Folder Structure](image1)
+
 ## System Architecture
 
 1. **Frontend:** Interactive user interface for attendance management and chatbot access.
 2. **Backend (PHP):** Handles business logic and database communication.
 3. **Database (MySQL):** Stores all core data.
 4. **AI Chatbot (Python):**
-   - Direct connection to MySQL database.
+   - Built with Flask, connects directly to the MySQL database.
    - Translates natural language commands into database queries and visualizations.
 
 ## Getting Started
@@ -71,8 +73,8 @@ See the structure overview above for more detail.
     - Serve the frontend files using a web server or development server.
 5. **Launch the Chatbot:**
     - Clone and set up the chatbot from [MySQL RAG: LLM-Powered SQL Chatbot](https://github.com/YUGESHKARAN/MySQL-RAG.git)
-    - Install Python dependencies: `streamlit`, `langchain`, `openai`.
-    - Run the Streamlit app for the chatbot interface.
+    - Install Python dependencies: `flask`, `langchain`, `openai`.
+    - Follow the instructions in the chatbot repo to run the Flask app.
 
 ## Usage
 
