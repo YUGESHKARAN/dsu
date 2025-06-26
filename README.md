@@ -1,4 +1,4 @@
-# Attendance Management System with LLM-Powered SQL Chatbot 👨‍🏫🤖
+# Attendance Management System with LLM-Powered SQL Chatbot 👨‍🏫
 
 ## Overview
 
