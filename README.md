@@ -1,5 +1,14 @@
 # Attendance Management System with LLM-Powered SQL Chatbot 👨‍🏫
 
+![GitHub repo size](https://img.shields.io/github/repo-size/YUGESHKARAN/dsu)
+![GitHub stars](https://img.shields.io/github/stars/YUGESHKARAN/dsu?style=social)
+![GitHub forks](https://img.shields.io/github/forks/YUGESHKARAN/dsu?style=social)
+![GitHub issues](https://img.shields.io/github/issues/YUGESHKARAN/dsu)
+![GitHub last commit](https://img.shields.io/github/last-commit/YUGESHKARAN/dsu)
+![GitHub contributors](https://img.shields.io/github/contributors/YUGESHKARAN/dsu)
+![GitHub license](https://img.shields.io/github/license/YUGESHKARAN/dsu)
+
+
 ## Overview
 
 This project delivers a web-based Attendance Management System designed to solve common issues in traditional systems, like inefficient faculty interfaces and the time-consuming process of analyzing and visualizing student data with SQL queries. Leveraging modern web technologies and AI, our system provides a responsive, scalable solution that enhances both usability and data management efficiency. 🌐📊
